@@ -7,6 +7,19 @@ REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 echo "[info] SITE=$SITE"
 echo "[info] REPO=$REPO_ROOT"
 
+# Check source path
+if [ ! -d "$SITE/wp-content" ]; then
+  echo
+  echo "[error] WordPress path not found:"
+  echo "  $SITE/wp-content"
+  echo
+  echo "Make sure the SITE path is correct."
+  echo "Example:"
+  echo "  SITE=/volume/htdocs/example.com.tw ./scripts/sync-from-site.sh"
+  echo
+  exit 2
+fi
+
 mkdir -p "$REPO_ROOT/mu-plugins" "$REPO_ROOT/themes" "$REPO_ROOT/plugins"
 
 echo "[sync] mu-plugins (exclude stg-* / *.off / staging readme)"
