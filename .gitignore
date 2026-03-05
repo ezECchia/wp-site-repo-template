@@ -1,0 +1,43 @@
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- editor ---
+*.swp
+*.swo
+*~
+
+# --- backups ---
+*.bak
+*.bak.*
+*.off
+*.tmp
+
+# --- logs ---
+*.log
+
+# --- archives ---
+*.zip
+*.tar
+*.tar.gz
+*.sql
+
+# --- WordPress runtime ---
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backups/
+wp-content/ai1wm-backups/
+
+# --- Node ---
+node_modules/
+
+# --- Composer ---
+vendor/
+
+# --- env ---
+.env
+.env.*
+
+# --- misc ---
+*.lock

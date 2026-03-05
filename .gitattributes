@@ -1,0 +1,14 @@
+# Avoid huge diffs for large/binary assets
+themes/astra-child/Dictionary.json -diff
+
+# Binary assets
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.webp binary
+*.pdf binary
+
+# Minified assets
+*.min.js -diff
+*.min.css -diff
