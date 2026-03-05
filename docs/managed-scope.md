@@ -1,19 +1,16 @@
-# Managed Scope (audio.nmth.gov.tw)
+# Managed Scope (Template)
 
-本 repo 只納管「我們可控/可維護」的程式碼與設定，避免把 WP 核心、uploads、第三方外掛整包混進版本控管。
+本 repo 只納管「我們可控/可維護」的程式碼與設定，避免把 WP core、uploads、第三方外掛整包混進版本控管。
 
 ## Included (tracked)
-- mu-plugins/（排除 stg-* 與 *.off）
-- themes/astra-child/
-- plugins:
-  - nmth-http-guard
-  - nmth-export-empty-alert-h2
-  - custom-elementor-uael-overrides
+- mu-plugins/（自製/客製；staging-only 檔案不要進）
+- themes/（child theme / 客製 theme）
+- plugins/（自製/客製外掛）
+- docs/、scripts/
 
 ## Excluded (not tracked)
 - WordPress core
 - wp-content/uploads/
 - wp-content/cache/, upgrade/
 - 第三方外掛整包（elementor, loco-translate, redis-cache…等）
-- mxp-dev-tools（明確不納管）
-- *.off, stg-*.php, *.bak*, *.log, *.zip, *.sql, *.tar*（由 .gitignore 排除）
+- staging-only: stg-*.php, *.off, *.bak*
